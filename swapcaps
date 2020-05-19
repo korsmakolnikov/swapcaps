@@ -1,0 +1,13 @@
+#!/bin/bash
+
+x=`setxkbmap -print`
+
+pat="swapcaps"
+
+if [[ $x =~ $pat ]] 
+then 
+  setxkbmap -option
+else
+  setxkbmap -option ctrl:swapcaps
+fi
+
